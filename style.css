@@ -21,84 +21,86 @@ body>h1 {
     text-align: center;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    border: 1px solid gray;
-    border-radius: 8px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+@media screen and (max-width: 599px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border: 1px solid gray;
+        border-radius: 8px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+    }
+    
+    section {
+        display: flex;
+    }
+    
+    .btn {
+        background-color: brown;
+        border: none;
+        border-radius: 3px;
+        padding: 8px;
+        color: aquamarine;
+        width: 4.9rem;
+        height: 6.3rem;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 700;
+    
+    }
+    
+    .malz {
+        display: flex;
+        flex-direction: column;
+        margin: .5rem;
+        gap: .7rem;
+    }
+    
+    .display {
+        display: flex;
+        flex: 1;
+        height: 17rem;
+        background-color: aquamarine;
+        justify-content: center;
+        align-items: center;
+        margin: .5rem;
+        text-align: center;
+        border-radius: 8px;
+    
+    }
+    
+    btn-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .buttons {
+        display: flex;
+        gap: 1.5rem;
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+        margin-right: .5rem;
+    
+    }
+    
+    .radio-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        margin: 1rem;
+        font-size: xx-small;
+    }
+    
+    input {
+        cursor: pointer;
+    }
 }
 
-section {
-    display: flex;
-}
-
-.btn {
-    background-color: brown;
-    border: none;
-    border-radius: 3px;
-    padding: 8px;
-    color: aquamarine;
-    width: 4.9rem;
-    height: 6.3rem;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 700;
-
-}
-
-.malz {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: .5rem;
-    gap: .7rem;
-}
-
-.display {
-    display: flex;
-    flex: 1;
-    height: 17rem;
-    background-color: aquamarine;
-    justify-content: center;
-    align-items: center;
-    margin: .5rem;
-    text-align: center;
-    border-radius: 8px;
-
-}
-
-btn-radio {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.buttons {
-    display: flex;
-    gap: 1.5rem;
-    margin-left: .5rem;
-    margin-bottom: .5rem;
-    margin-right: .5rem;
-
-}
-
-.radio-btns {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    margin: 1rem;
-    font-size: xx-small;
-}
-
-input {
-    cursor: pointer;
-}
 
 
-@media screen and (min-width: 600) {
+@media screen and (min-width: 600px) {
     main {
         display: flex;
         flex-direction: column;
@@ -115,8 +117,11 @@ input {
         border-radius: 3px;
         padding: 8px;
         color: aquamarine;
-        width: 6rem;
+        width: 4.9rem;
+        height: 6.3rem;
         cursor: pointer;
+        font-size: 1rem;
+        font-weight: 700;
 
     }
 
@@ -136,6 +141,7 @@ input {
         justify-content: center;
         align-items: center;
         margin: .5rem;
+        text-align: center;
         border-radius: 8px;
 
     }
@@ -169,10 +175,11 @@ input {
 @media screen and (min-width: 1007px) {
     main {
         display: flex;
+        flex-direction: column;
         gap: 2.8rem;
     }
 
-    section {
+    main > section {
         display: flex;
     }
 
@@ -182,19 +189,20 @@ input {
         border-radius: 3px;
         padding: 8px;
         color: aquamarine;
-        width: 6rem;
+        width: 4.9rem;
+        height: 6.3rem;
         cursor: pointer;
-
+        font-size: 1rem;
+        font-weight: 700;
     }
-
     .malz {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         margin: .5rem;
         gap: .7rem;
     }
-
     .display {
         display: flex;
         flex: 1;
