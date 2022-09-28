@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+section {
+    display: flex;
+}
+
+.btn {
+    background-color: brown;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    color: aquamarine;
+    width: 6rem;
+    cursor: pointer;
+
+}
+.malz {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 1rem;
+}
+.display {
+    display: flex;
+    flex: 1;
+    height: 8rem;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    margin: 1rem;
+    gap: 1.5rem;
+}
+input {
+    cursor: pointer;
+}
