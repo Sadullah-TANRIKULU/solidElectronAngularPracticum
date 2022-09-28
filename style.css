@@ -37,10 +37,21 @@ section {
     justify-content: center;
     align-items: center;
 }
+btn-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 .buttons {
     display: flex;
     margin: 1rem;
     gap: 1.5rem;
+}
+radio-btns {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 1rem;
 }
 input {
     cursor: pointer;
