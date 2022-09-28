@@ -3,12 +3,34 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+
 }
+
+body>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52.6rem;
+    opacity: 0.1;
+    z-index: -10;
+}
+
+body>h1 {
+    text-align: center;
+}
+
 main {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 1.5rem;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
+
 section {
     display: flex;
 }
@@ -19,40 +41,197 @@ section {
     border-radius: 3px;
     padding: 8px;
     color: aquamarine;
-    width: 6rem;
+    width: 4.9rem;
+    height: 6.3rem;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
 
 }
+
 .malz {
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: 1rem;
+    margin: .5rem;
+    gap: .7rem;
 }
+
 .display {
     display: flex;
     flex: 1;
-    height: 8rem;
+    height: 17rem;
     background-color: aquamarine;
     justify-content: center;
     align-items: center;
+    margin: .5rem;
+    text-align: center;
+    border-radius: 8px;
+
 }
+
 btn-radio {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .buttons {
     display: flex;
-    margin: 1rem;
     gap: 1.5rem;
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+
 }
-radio-btns {
+
+.radio-btns {
     display: flex;
-    flex: 1;
     flex-direction: column;
+    gap: 0.7rem;
     margin: 1rem;
+    font-size: xx-small;
 }
+
 input {
     cursor: pointer;
+}
+
+
+@media screen and (min-width: 600) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+    }
+
+    section {
+        display: flex;
+    }
+
+    .btn {
+        background-color: brown;
+        border: none;
+        border-radius: 3px;
+        padding: 8px;
+        color: aquamarine;
+        width: 6rem;
+        cursor: pointer;
+
+    }
+
+    .malz {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: .5rem;
+        gap: .7rem;
+    }
+
+    .display {
+        display: flex;
+        flex: 1;
+        height: 17rem;
+        background-color: aquamarine;
+        justify-content: center;
+        align-items: center;
+        margin: .5rem;
+        border-radius: 8px;
+
+    }
+
+    btn-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .buttons {
+        display: flex;
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+        margin-right: .5rem;
+        gap: 1.5rem;
+    }
+
+    radio-btns {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    input {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1007px) {
+    main {
+        display: flex;
+        gap: 2.8rem;
+    }
+
+    section {
+        display: flex;
+    }
+
+    .btn {
+        background-color: brown;
+        border: none;
+        border-radius: 3px;
+        padding: 8px;
+        color: aquamarine;
+        width: 6rem;
+        cursor: pointer;
+
+    }
+
+    .malz {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: .5rem;
+        gap: .7rem;
+    }
+
+    .display {
+        display: flex;
+        flex: 1;
+        height: 17rem;
+        background-color: aquamarine;
+        justify-content: center;
+        align-items: center;
+        margin: .5rem;
+        border-radius: 8px;
+
+    }
+
+    btn-radio {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .buttons {
+        display: flex;
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+        margin-right: .5rem;
+        gap: 1.5rem;
+    }
+
+    radio-btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    input {
+        cursor: pointer;
+    }
 }
