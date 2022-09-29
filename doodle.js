@@ -101,139 +101,137 @@ function stokKontrolu() {
 
 function koftetavukpatoicecek() {
   return new Promise((resolve, reject) => {
-    try {
-      if (stokYeterli) {
-        btnKofte.style.visibility = "visible";
-        btnTavuk.style.visibility = "visible";
-        azPisir.style.display = "flex";
-        ortaPisir.style.display = "flex";
-        cokPisir.style.display = "flex";
+    if (stokYeterli) {
+      btnKofte.style.visibility = "visible";
+      btnTavuk.style.visibility = "visible";
+      azPisir.style.display = "flex";
+      ortaPisir.style.display = "flex";
+      cokPisir.style.display = "flex";
 
-        if (marul.checked === true) {
-          malzemeler.push(marul.value);
-          marulSayisi -= 1;
-          console.log("kalan marul : ", marulSayisi);
-        }
-        if (domates.checked === true) {
-          malzemeler.push(domates.value);
-          domatesSayisi -= 1;
-          console.log("kalan domates : ", domatesSayisi);
-        }
-        if (tursu.checked === true) {
-          malzemeler.push(tursu.value);
-          tursuSayisi -= 1;
-          console.log("kalan tursu : ", tursuSayisi);
-        }
-        if (sogan.checked === true) {
-          malzemeler.push(sogan.value);
-          soganSayisi -= 1;
-          console.log("kalan sogan : ", soganSayisi);
-        }
-        if (ekmek.checked === true) {
-          malzemeler.push(ekmek.value);
-          ekmekSayisi -= 1;
-          console.log("kalan ekmek : ", ekmekSayisi);
-        }
-        if (patates.checked === true) {
-          malzemeler.push(patates.value);
-          patatesSayisi -= 1;
-          console.log("kalan patates : ", patatesSayisi);
-        }
-        if (cola.checked === true) {
-          malzemeler.push(cola.value);
-          colaSayisi -= 1;
-          console.log("kalan cola : ", colaSayisi);
-        }
-        if (paketsos.checked === true) {
-          malzemeler.push(paketsos.value);
-          paketsosSayisi -= 1;
-          console.log("kalan paketsos : ", paketsosSayisi);
-        }
-
-        function patatesKizart() {
-          setTimeout(() => {
-            return resolve((display.textContent = "4 - PATATES HAZIR"));
-          }, 5000);
-        }
-
-        function icecegiHazirla() {
-          if (cola.checked === true) {
-            setTimeout(() => {
-              return (display.textContent = "5 - İÇECEK HAZIR");
-            }, 2000);
-          } else {
-            return (display.textContent = "5 - İÇECEK SİPARİŞ EDİLMEMİŞ");
-          }
-        }
-
-        function kofteSiparisi() {
-          if (azPisirInput.checked === true) {
-            setTimeout(() => {
-              return (display.textContent =
-                "3 - AZ PİŞMİŞ KÖFTE HAZIR"), (koftePisti = true);
-            }, 2000);
-          } else if (ortaPisirInput.checked === true) {
-            setTimeout(() => {
-              return (display.textContent =
-                "3 - ORTA PİŞMİŞ KÖFTE HAZIR"), (koftePisti = true);
-            }, 3000);
-          } else if (cokPisirInput.checked === true) {
-            setTimeout(() => {
-              return (display.textContent =
-                "3 - ÇOK PİŞMİŞ KÖFTE HAZIR"), (koftePisti = true);
-            }, 4000);
-          } else {
-            return alert("Lütfen pişme derecesini seçiniz!");
-          }
-        }
-
-        function tavukSiparisi() {
-          setTimeout(() => {
-            return (display.textContent = "3 - TAVUK PİŞTİ"), (tavukPisti = true);
-          }, 3000);
-        }
-
-        btnKofte.addEventListener("click", () => {
-          if (
-            azPisirInput.checked === true ||
-            ortaPisirInput.checked === true ||
-            cokPisirInput.checked === true
-          ) {
-            kofteSayisi -= 1;
-            console.log("kalan kofte : ", kofteSayisi);
-            btnTavuk.style.visibility = "hidden";
-            return kofteSiparisi(), patatesKizart(), icecegiHazirla();
-          } else {
-            return alert("⁉ Lütfen pişme derecesini seçiniz!");
-          }
-          // btnKofte.disabled = true;
-        });
-
-        btnTavuk.addEventListener("click", () => {
-          tavukSayisi -= 1;
-          console.log("kalan tavuk : ", tavukSayisi);
-          btnKofte.style.visibility = "hidden";
-          azPisir.style.display = "none";
-          ortaPisir.style.display = "none";
-          cokPisir.style.display = "none";
-          // btnTavuk.disabled = true;
-          return tavukSiparisi(), patatesKizart(), icecegiHazirla();
-        });
+      if (marul.checked === true) {
+        malzemeler.push(marul.value);
+        marulSayisi -= 1;
+        console.log("kalan marul : ", marulSayisi);
       }
-    } catch (error) {
-      reject(console.error(error));
+      if (domates.checked === true) {
+        malzemeler.push(domates.value);
+        domatesSayisi -= 1;
+        console.log("kalan domates : ", domatesSayisi);
+      }
+      if (tursu.checked === true) {
+        malzemeler.push(tursu.value);
+        tursuSayisi -= 1;
+        console.log("kalan tursu : ", tursuSayisi);
+      }
+      if (sogan.checked === true) {
+        malzemeler.push(sogan.value);
+        soganSayisi -= 1;
+        console.log("kalan sogan : ", soganSayisi);
+      }
+      if (ekmek.checked === true) {
+        malzemeler.push(ekmek.value);
+        ekmekSayisi -= 1;
+        console.log("kalan ekmek : ", ekmekSayisi);
+      }
+      if (patates.checked === true) {
+        malzemeler.push(patates.value);
+        patatesSayisi -= 1;
+        console.log("kalan patates : ", patatesSayisi);
+      }
+      if (cola.checked === true) {
+        malzemeler.push(cola.value);
+        colaSayisi -= 1;
+        console.log("kalan cola : ", colaSayisi);
+      }
+      if (paketsos.checked === true) {
+        malzemeler.push(paketsos.value);
+        paketsosSayisi -= 1;
+        console.log("kalan paketsos : ", paketsosSayisi);
+      }
+
+      function patatesKizart() {
+        setTimeout(() => {
+          if (patates.checked === true) {
+            return resolve((display.textContent = "4 - PATATES HAZIR"));
+          } else {
+            return resolve((display.textContent = "4 - PATATES SİPARİŞ EDİLMEMİŞ"));
+          }
+        }, 5000);
+      }
+
+      function icecegiHazirla() {
+        if (cola.checked === true) {
+          setTimeout(() => {
+            return (display.textContent = "5 - İÇECEK HAZIR");
+          }, 2000);
+        } else {
+          return (display.textContent = "5 - İÇECEK SİPARİŞ EDİLMEMİŞ");
+        }
+      }
+
+      function kofteSiparisi() {
+        if (azPisirInput.checked === true) {
+          setTimeout(() => {
+            return (display.textContent =
+              "3 - AZ PİŞMİŞ KÖFTE HAZIR"), (koftePisti = true);
+          }, 2000);
+        } else if (ortaPisirInput.checked === true) {
+          setTimeout(() => {
+            return (display.textContent =
+              "3 - ORTA PİŞMİŞ KÖFTE HAZIR"), (koftePisti = true);
+          }, 3000);
+        } else if (cokPisirInput.checked === true) {
+          setTimeout(() => {
+            return (display.textContent =
+              "3 - ÇOK PİŞMİŞ KÖFTE HAZIR"), (koftePisti = true);
+          }, 4000);
+        } else {
+          return alert("Lütfen pişme derecesini seçiniz!");
+        }
+      }
+
+      function tavukSiparisi() {
+        setTimeout(() => {
+          return (display.textContent = "3 - TAVUK PİŞTİ"), (tavukPisti = true);
+        }, 3000);
+      }
+
+      btnKofte.addEventListener("click", () => {
+        if (
+          azPisirInput.checked === true ||
+          ortaPisirInput.checked === true ||
+          cokPisirInput.checked === true
+        ) {
+          kofteSayisi -= 1;
+          console.log("kalan kofte : ", kofteSayisi);
+          btnTavuk.style.visibility = "hidden";
+          return (kofteSiparisi(), patatesKizart(), icecegiHazirla());
+        } else {
+          alert("⁉ Lütfen pişme derecesini seçiniz!");
+        }
+        // btnKofte.disabled = true;
+      });
+
+      btnTavuk.addEventListener("click", () => {
+        tavukSayisi -= 1;
+        console.log("kalan tavuk : ", tavukSayisi);
+        btnKofte.style.visibility = "hidden";
+        azPisir.style.display = "none";
+        ortaPisir.style.display = "none";
+        cokPisir.style.display = "none";
+        // btnTavuk.disabled = true;
+        return (tavukSiparisi(), patatesKizart(), icecegiHazirla());
+      });
     }
   });
 }
 
 function sosVeHamburgerTepsiye() {
   return new Promise((resolve, reject) => {
-    try {
+    if (tavukPisti || koftePisti) {
       setTimeout(() => {
         resolve((display.textContent = "6 - SOS VE HAMBURGER TEPSİYE KONULDU"));
       }, 1000);
-    } catch (error) {
-      reject(console.error(error, "bir şeyler yanlış gitti 😁"));
     }
   });
 }
@@ -258,8 +256,8 @@ btnSiparis.addEventListener("click", () => {
     .then(servisEt)
     .then(() => {
       setTimeout(() => {
-        window.location.reload();
-      }, 1500);
+        return window.location.reload();
+      }, 2000);
     })
     .catch(err => {
       console.error(err);
